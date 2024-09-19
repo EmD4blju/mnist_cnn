@@ -1,1 +1,1 @@
-#TODO: functions which will optimize 
+#TODO: functions which task will be to perform data preprocessing
