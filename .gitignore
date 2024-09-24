@@ -1,2 +1,3 @@
 .venv/
 .ignored_files/
+__pycache__/
