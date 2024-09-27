@@ -1,7 +1,6 @@
 from keras import datasets as ds
-import data_normalization as dn
+import data_preprocessing.data_normalization as dn
 import numpy as np
-import matplotlib.pyplot as plt
 import cv2 
 
 def load_mnist() -> dict:
@@ -12,6 +11,8 @@ def load_mnist() -> dict:
     """
     
     (x_train, y_train), (x_test, y_test) = ds.mnist.load_data()
+
+    print(x_train.shape)
 
     normalized_train_dataset = np.array(dn.normalize_mnist_dataset(dataset=x_train))
     normalized_test_dataset = np.array(dn.normalize_mnist_dataset(dataset=x_test))

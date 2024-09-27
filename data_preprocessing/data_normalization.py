@@ -54,7 +54,7 @@ def normalize(img:np.ndarray) -> np.ndarray:
 def normalize_mnist_dataset(dataset:np.ndarray) -> np.ndarray:
     normalized_dataset= []
 
-    for i in tqdm(range(len(dataset)//5), desc='Loading Mnist...', colour='#00FF00'):
+    for i in tqdm(range(len(dataset)), desc='Loading Mnist...', colour='#00FF00'):
         normalized_dataset.append(normalize_pixel_values(dataset[i]))
 
     return np.array(normalized_dataset)
